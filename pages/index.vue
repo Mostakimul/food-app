@@ -1,15 +1,18 @@
 <template>
   <main class="container">
     <TheHeader />
+    <TheResturantInfo />
   </main>
 </template>
 
 <script>
 import TheHeader from '@/components/TheHeader.vue'
+import TheResturantInfo from '@/components/TheResturantInfo.vue'
 
 export default {
   components: {
     TheHeader,
+    TheResturantInfo,
   },
 }
 </script>
