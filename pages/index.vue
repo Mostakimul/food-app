@@ -1,11 +1,17 @@
 <template>
   <main class="container">
-    <h2>Heelo from home</h2>
+    <TheHeader />
   </main>
 </template>
 
 <script>
-export default {}
+import TheHeader from '@/components/TheHeader.vue'
+
+export default {
+  components: {
+    TheHeader,
+  },
+}
 </script>
 
 <style>
