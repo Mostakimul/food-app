@@ -4,12 +4,12 @@
       <li><nuxt-link to="/">Home</nuxt-link></li>
       <li><nuxt-link to="/restaurant">Restaurant</nuxt-link></li>
     </ul>
+    <nuxt-link to="/cart">Cart</nuxt-link>
   </nav>
 </template>
 
 <script>
-export default {}
+export default {};
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

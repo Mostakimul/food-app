@@ -24,6 +24,7 @@
             type="radio"
             name="option"
             :id="option"
+            :value="option"
             v-model="itemOptions"
           />
           <label :for="option">{{ option }}</label>
@@ -40,7 +41,7 @@
             name="addon"
             :id="addon"
             :value="addon"
-            v-model="ItemAddons"
+            v-model="itemAddons"
           />
           <label :for="addon">{{ addon }}</label>
         </div>
@@ -82,6 +83,9 @@ export default {
         combinedPrice: this.combinedPrice,
       };
       this.cartSubmitted = true;
+
+      // For Store
+      this.$store.commit('addToCart', formOutput);
     },
   },
   computed: {
