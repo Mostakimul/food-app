@@ -19,11 +19,11 @@ export default {
   props: {
     select: {
       type: String,
-      default: ' cuisine',
+      default: 'cuisine',
     },
     selectOptions: {
       type: Array,
-      default: () => [' Tacos', 'Pizza', 'Dim Sum'],
+      default: () => ['tacos', 'pizza', 'dim sum'],
     },
   },
 };

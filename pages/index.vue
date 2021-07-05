@@ -1,20 +1,24 @@
 <template>
   <main class="container">
     <TheHeader />
-    <TheResturantInfo />
+    <TheResturantInfo :dataSource="fooddata" />
   </main>
 </template>
 
 <script>
-import TheHeader from '@/components/TheHeader.vue'
-import TheResturantInfo from '@/components/TheResturantInfo.vue'
+import TheHeader from '@/components/TheHeader.vue';
+import TheResturantInfo from '@/components/TheResturantInfo.vue';
+import { mapState } from 'vuex';
 
 export default {
   components: {
     TheHeader,
     TheResturantInfo,
   },
-}
+  computed: {
+    ...mapState(['fooddata']),
+  },
+};
 </script>
 
 <style>
