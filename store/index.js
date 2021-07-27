@@ -155,11 +155,17 @@ export const state = () => ({
   ],
 });
 
-// export const getters = {
-//   getterValue: state => {
-//     return state.value
-//   }
-// }
+export const getters = {
+  // getterValue: state => {
+  //   return state.value
+  // }
+
+  totalPrice: (state) => {
+    if (!state.cart.length) return 0;
+    // + added before for converting to number, 0 means start from 0
+    return state.cart.reduce((acc, curr) => acc + +curr.combinedPrice, 0);
+  },
+};
 
 export const mutations = {
   // updateFoodData: (state, data) => {
