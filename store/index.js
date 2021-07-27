@@ -160,6 +160,12 @@ export const getters = {
   //   return state.value
   // }
 
+  cartCount: (state) => {
+    if (!state.cart.length) return 0;
+
+    return state.cart.reduce((acc, curr) => acc + +curr.count, 0);
+  },
+
   totalPrice: (state) => {
     if (!state.cart.length) return 0;
     // + added before for converting to number, 0 means start from 0
